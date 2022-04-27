@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>JokerSite</title>
-    <link>https://koudaihaizei.github.io/</link>
-    <description>Recent content on JokerSite</description>
+    <title>Posts on JokerSite</title>
+    <link>https://koudaihaizei.github.io/posts/</link>
+    <description>Recent content in Posts on JokerSite</description>
     <image>
       <url>https://koudaihaizei.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://koudaihaizei.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 26 Apr 2022 14:38:47 +0800</lastBuildDate><atom:link href="https://koudaihaizei.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 26 Apr 2022 14:38:47 +0800</lastBuildDate><atom:link href="https://koudaihaizei.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Interrupts</title>
       <link>https://koudaihaizei.github.io/posts/java/concurrency/interrupts/</link>
@@ -21,15 +21,6 @@
 /** * 无法中断 */ private void demo1() { Thread thread = new Thread(() -&amp;gt; { while (true) { Thread.yield(); } }); thread.start(); thread.interrupt(); } 程序通过对中断标识位判断做出处理，响应中断执行返回
 /** * 响应中断 */ private void demo2() { Thread thread = new Thread(() -&amp;gt; { while (true) { Thread.yield(); if (Thread.currentThread().isInterrupted()) { System.out.println(&amp;#34;thread is interrupted&amp;#34;); return; } } }); thread.start(); thread.interrupt(); } 捕获可中断方法中的InterruptedException，不做后续处理，当前程序无法响应中断
 /** * 捕获中断，中断失败 */ private void demo3() throws InterruptedException { Thread thread = new Thread(() -&amp;gt; { while (true) { Thread.</description>
-    </item>
-    
-    <item>
-      <title>My 1st post</title>
-      <link>https://koudaihaizei.github.io/page/</link>
-      <pubDate>Tue, 15 Sep 2020 11:30:03 +0000</pubDate>
-      
-      <guid>https://koudaihaizei.github.io/page/</guid>
-      <description>Desc Text.</description>
     </item>
     
   </channel>
