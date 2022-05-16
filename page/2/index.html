@@ -52,63 +52,42 @@
 <span>example.org</span>
 </a>
 </li></ul></nav></header><main class=main>
-<article class="first-entry home-info">
+<article class=post-entry>
 <header class=entry-header>
-<h1>Hi there 👋</h1></header><div class=entry-content>
-<p>Welcome to my blog</p></div><footer class=entry-footer>
-<div class=social-icons>
-<a href=https://twitter.com/ target=_blank rel="noopener noreferrer me" title=Twitter><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9.0 01-3.14 1.53 4.48 4.48.0 00-7.86 3v1A10.66 10.66.0 013 4s-4 9 5 13a11.64 11.64.0 01-7 2c9 5 20 0 20-11.5a4.5 4.5.0 00-.08-.83A7.72 7.72.0 0023 3z"/></svg>
-</a>
-<a href=https://stackoverflow.com target=_blank rel="noopener noreferrer me" title=Stackoverflow><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.913 16.041v6.848h17.599v-6.848M7.16 18.696h8.925M7.65 13.937l8.675 1.8M9.214 9.124l8.058 3.758M12.086 4.65l6.849 5.66M15.774 1.111l5.313 7.162"/></svg>
-</a>
-<a href=https://github.com/ target=_blank rel="noopener noreferrer me" title=Github><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37.0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44.0 0020 4.77 5.07 5.07.0 0019.91 1S18.73.65 16 2.48a13.38 13.38.0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07.0 005 4.77 5.44 5.44.0 003.5 8.55c0 5.42 3.3 6.61 6.44 7A3.37 3.37.0 009 18.13V22"/></svg>
-</a>
-</div></footer></article><article class=post-entry>
-<header class=entry-header>
-<h2>Leetcode51
+<h2>Leetcode1
 </h2></header><div class=entry-content>
-<p>51. N 皇后 n 皇后问题 研究的是如何将 n 个皇后放置在 n×n 的棋盘上，并且使皇后彼此之间不能相互攻击。
-给你一个整数 n ，返回所有不同的 n 皇后问题 的解决方案。
-每一种解法包含一个不同的 n 皇后问题 的棋子放置方案，该方案中 ‘Q’ 和 ‘.’ 分别代表了皇后和空位。
-来源：力扣（LeetCode） 链接：https://leetcode.cn/problems/n-queens
-public List&lt;List&lt;String>> solveNQueens(int n) { List&lt;List&lt;String>> res = new ArrayList&lt;>(); char[][] temp = new char[n][n]; for (int i = 0; i &lt; n; i++) { for (int j = 0; j &lt; n; j++) { temp[i][j] = '....</p></div><footer class=entry-footer><span title="2022-05-16 22:50:57 +0800 CST">May 16, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to Leetcode51" href=https://koudaihaizei.github.io/posts/algorithm/leetcode/leetcode51/></a>
+<p>1. 两数之和 给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target 的那 两个 整数，并返回它们的数组下标。
+你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。
+你可以按任意顺序返回答案。
+来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/two-sum
+public int[] twoSum(int[] nums, int target) { // 利用hash表提升检索效率 Map&lt;Integer, Integer> map = new HashMap&lt;>(); for (int i = 0; i &lt; nums.length; i++) { int other = target - nums[i]; // 遍历过程中判断后加入集合，效率最高 if (map.containsKey(other)) { return new int[]{map.get(other), i}; } map.put(nums[i], i); } return new int[]{-1, -1}; } </p></div><footer class=entry-footer><span title="2022-05-06 22:33:10 +0800 CST">May 6, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to Leetcode1" href=https://koudaihaizei.github.io/posts/algorithm/leetcode/leetcode1/></a>
 </article><article class=post-entry>
 <header class=entry-header>
-<h2>Leetcode322
+<h2>Leetcode34
 </h2></header><div class=entry-content>
-<p>322. 零钱兑换 给你一个整数数组 coins ，表示不同面额的硬币；以及一个整数 amount ，表示总金额。
-计算并返回可以凑成总金额所需的 最少的硬币个数 。如果没有任何一种硬币组合能组成总金额，返回 -1 。
-你可以认为每种硬币的数量是无限的。
-来源：力扣（LeetCode） 链接：https://leetcode.cn/problems/coin-change
-解法一，自顶向下
-public int coinChange(int[] coins, int amount) { int[] dp = new int[amount + 1]; // 初始化为无法达到的最大值 Arrays.fill(dp, amount + 1); int res = coinChange(coins, amount, dp, amount); // 判断是否能够凑整 return res != amount + 1 ? res : -1; } private int coinChange(int[] coins, int amount, int[] dp, int total) { if (amount == 0) { return 0; } if (amount &lt; 0) { return -1; } // 利用记录结果减少重复计算 if (dp[amount] !...</p></div><footer class=entry-footer><span title="2022-05-09 23:39:39 +0800 CST">May 9, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to Leetcode322" href=https://koudaihaizei.github.io/posts/algorithm/leetcode/leetcode322/></a>
+<p>34. 在排序数组中查找元素的第一个和最后一个位置 给定一个按照升序排列的整数数组 nums，和一个目标值 target。找出给定目标值在数组中的开始位置和结束位置。
+如果数组中不存在目标值 target，返回 [-1, -1]。
+来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array
+思路基于二分查找改造，边界条件判断可参考leetcode704。
+解法一 public int[] searchRange(int[] nums, int target) { int leftIndex = searchLeftRange(nums, target); if (leftIndex == -1) { return new int[]{-1, -1}; } int rightIndex = searchRightRange(nums, target) ; return new int[]{leftIndex, rightIndex}; } private int searchLeftRange(int[] nums, int target) { int left = 0; int right = nums....</p></div><footer class=entry-footer><span title="2022-05-05 23:13:58 +0800 CST">May 5, 2022</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to Leetcode34" href=https://koudaihaizei.github.io/posts/algorithm/leetcode/leetcode34/></a>
 </article><article class=post-entry>
 <header class=entry-header>
-<h2>Leetcode18
+<h2>Leetcode704
 </h2></header><div class=entry-content>
-<p>18. 四数之和 给你一个由 n 个整数组成的数组 nums ，和一个目标值 target 。请你找出并返回满足下述全部条件且不重复的四元组 [nums[a], nums[b], nums[c], nums[d]] （若两个四元组元素一一对应，则认为两个四元组重复）：
-0 &lt;= a, b, c, d &lt; n a、b、c 和 d 互不相同 nums[a] + nums[b] + nums[c] + nums[d] == target 你可以按 任意顺序 返回答案 。
-来源：力扣（LeetCode） 链接：https://leetcode.cn/problems/4sum
-public List&lt;List&lt;Integer>> fourSum(int[] nums, int target) { List&lt;List&lt;Integer>> res = new ArrayList&lt;>(); if (nums.length &lt; 4) { return res; } // 升序排序 Arrays....</p></div><footer class=entry-footer><span title="2022-05-09 22:28:29 +0800 CST">May 9, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to Leetcode18" href=https://koudaihaizei.github.io/posts/algorithm/leetcode/leetcode18/></a>
+<p>704. 二分查找 给定一个 n 个元素有序的（升序）整型数组 nums 和一个目标值 target ，写一个函数搜索 nums 中的 target，如果目标值存在返回下标，否则返回 -1。
+来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/binary-search
+解法一 public int search(int[] nums, int target) { // 区间[0, nums.length - 1] int left = 0; int right = nums.length - 1; // 由于采用闭区间[0, nums.length - 1]，right初始为nums.length - 1，因此采用left&lt;=right作为判断 while (left &lt;= right) { // 避免数字相加溢出 // 移位运算速度大于操作符 int mid = left + ((right - left) >> 1); if (nums[mid] &lt; target) { // mid对应值小于目标值，缩小区间为[mid + 1, right] left = mid + 1; } else if (nums[mid] > target) { // mid对应值大于目标值，缩小区间为[left, mid - 1] right = mid - 1; } else { return mid; } } return -1; } 解法二 public int search(int[] nums, int target) { // 区间[0, nums....</p></div><footer class=entry-footer><span title="2022-05-04 22:30:12 +0800 CST">May 4, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to Leetcode704" href=https://koudaihaizei.github.io/posts/algorithm/leetcode/leetcode704/></a>
 </article><article class=post-entry>
 <header class=entry-header>
-<h2>Leetcode509
+<h2>中断
 </h2></header><div class=entry-content>
-<p>509. 斐波那契数 斐波那契数 （通常用 F(n) 表示）形成的序列称为 斐波那契数列 。该数列由 0 和 1 开始，后面的每一项数字都是前面两项数字的和。也就是：
-F(0) = 0，F(1) = 1 F(n) = F(n - 1) + F(n - 2)，其中 n > 1 给定 n ，请计算 F(n) 。
-来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/fibonacci-number
-自底向上解法 public int fib(int n) { // f(0)=0,f(1)=1 if (n &lt;= 1) { return n; } int a = 0; int b = 1; for (int i = 2; i &lt;= n; i++) { // 临时保存b的值，以便于赋值给a int tmp = b; b = a + b; a = tmp; } return b; } 自顶向下解法 public int fib(int n) { // 备忘录，记录已计算的函数值 int[] memo = new int[n + 1]; return helper(n, memo); } private int helper(int n, int[] memo) { if (n &lt;= 1) { return n; } // 如果备忘录已记录，则直接返回备忘录结果值 if (memo[n] !...</p></div><footer class=entry-footer><span title="2022-05-08 20:57:47 +0800 CST">May 8, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to Leetcode509" href=https://koudaihaizei.github.io/posts/algorithm/leetcode/leetcode509/></a>
-</article><article class=post-entry>
-<header class=entry-header>
-<h2>Leetcode15
-</h2></header><div class=entry-content>
-<p>15. 三数之和 给你一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ，使得 a + b + c = 0 ？请你找出所有和为 0 且不重复的三元组。
-注意：答案中不可以包含重复的三元组。
-来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/3sum
-public List&lt;List&lt;Integer>> threeSum(int[] nums) { List&lt;List&lt;Integer>> res = new ArrayList&lt;>(); if (nums.length &lt; 3) { return res; } // 排序后，遍历第一个数，并用双指针法计算后面两个数 Arrays.sort(nums); for (int i = 0; i &lt; nums.length - 2; i++) { // 避免重复，跳过已经计算过的相同的第一个数 if (i !...</p></div><footer class=entry-footer><span title="2022-05-06 23:20:02 +0800 CST">May 6, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to Leetcode15" href=https://koudaihaizei.github.io/posts/algorithm/leetcode/leetcode15/></a>
+<p>中断用于指示线程停止正在做的事情，但线程响应中断的方式由程序决定，通常情况下程序会执行中断处理。
+未对中断标识位判断，无法响应中断
+/** * 无法中断 */ private void demo1() { Thread thread = new Thread(() -> { while (true) { Thread.yield(); } }); thread.start(); thread.interrupt(); } 程序通过对中断标识位判断做出处理，响应中断执行返回
+/** * 响应中断 */ private void demo2() { Thread thread = new Thread(() -> { while (true) { Thread.yield(); if (Thread.currentThread().isInterrupted()) { System.out.println("thread is interrupted"); return; } } }); thread....</p></div><footer class=entry-footer><span title="2022-04-26 14:38:47 +0800 CST">April 26, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to 中断" href=https://koudaihaizei.github.io/posts/java/concurrency/interrupts/></a>
 </article><footer class=page-footer>
 <nav class=pagination>
-<a class=next href=https://koudaihaizei.github.io/page/2/>Next Page »</a>
+<a class=prev href=https://koudaihaizei.github.io/>« Prev Page</a>
 </nav></footer></main><footer class=footer>
 <span>&copy; 2022 <a href=https://koudaihaizei.github.io>JokerSite</a></span>
 <span>
