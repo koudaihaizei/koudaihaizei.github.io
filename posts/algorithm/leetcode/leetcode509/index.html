@@ -26,11 +26,11 @@ F(0) = 0，F(1) = 1 F(n) = F(n - 1) + F(n - 2)，其中 n > 1 给定 n ，请计
 来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/fibonacci-number
  自底向上解法 public int fib(int n) {  // f(0)=0,f(1)=1  if (n <= 1) {  return n;  }  int a = 0;  int b = 1;  for (int i = 2; i <= n; i++) {  // 临时保存b的值，以便于赋值给a  int tmp = b;  b = a + b;  a = tmp;  }  return b; } 自顶向下解法 public int fib(int n) {  // 备忘录，记录已计算的函数值  int[] memo = new int[n + 1];  return helper(n, memo); }  private int helper(int n, int[] memo) {  if (n <= 1) {  return n;  }  // 如果备忘录已记录，则直接返回备忘录结果值  if (memo[n] !">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://koudaihaizei.github.io/posts/algorithm/leetcode/leetcode509/"><meta property="og:image" content="https://koudaihaizei.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"><meta property="article:section" content="posts">
+<meta property="og:url" content="https://koudaihaizei.github.io/posts/algorithm/leetcode/leetcode509/"><meta property="og:image" content="https://koudaihaizei.github.io/images/site/lien"><meta property="article:section" content="posts">
 <meta property="article:published_time" content="2022-05-08T20:57:47+08:00">
-<meta property="article:modified_time" content="2022-05-08T20:57:47+08:00"><meta property="og:site_name" content="ExampleSite">
+<meta property="article:modified_time" content="2022-05-08T20:57:47+08:00"><meta property="og:site_name" content="JokerSite">
 <meta name=twitter:card content="summary_large_image">
-<meta name=twitter:image content="https://koudaihaizei.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E">
+<meta name=twitter:image content="https://koudaihaizei.github.io/images/site/lien">
 <meta name=twitter:title content="Leetcode509">
 <meta name=twitter:description content="509. 斐波那契数  斐波那契数 （通常用 F(n) 表示）形成的序列称为 斐波那契数列 。该数列由 0 和 1 开始，后面的每一项数字都是前面两项数字的和。也就是：
 F(0) = 0，F(1) = 1 F(n) = F(n - 1) + F(n - 2)，其中 n > 1 给定 n ，请计算 F(n) 。
@@ -44,7 +44,7 @@ F(0) = 0，F(1) = 1 F(n) = F(n - 1) + F(n - 2)，其中 n > 1 给定 n ，请计
 <nav class=nav>
 <div class=logo>
 <a href=https://koudaihaizei.github.io accesskey=h title="Home (Alt + H)">
-<img src=https://koudaihaizei.github.io/apple-touch-icon.png alt=logo aria-label=logo height=35>Home</a>
+<img src=https://koudaihaizei.github.io/images/site/lien alt=logo aria-label=logo height=35>Home</a>
 <span class=logo-switches>
 <button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
 </button>
@@ -57,10 +57,6 @@ F(0) = 0，F(1) = 1 F(n) = F(n - 1) + F(n - 2)，其中 n > 1 给定 n ，请计
 </li><li>
 <a href=https://koudaihaizei.github.io/tags/ title=tags>
 <span>tags</span>
-</a>
-</li><li>
-<a href=https://example.org title=example.org>
-<span>example.org</span>
 </a>
 </li></ul></nav></header><main class=main>
 <article class=post-single>

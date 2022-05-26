@@ -5,11 +5,65 @@
     <link>https://koudaihaizei.github.io/</link>
     <description>Recent content on JokerSite</description>
     <image>
-      <url>https://koudaihaizei.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://koudaihaizei.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>https://koudaihaizei.github.io/images/site/lien</url>
+      <link>https://koudaihaizei.github.io/images/site/lien</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 16 May 2022 22:50:57 +0800</lastBuildDate><atom:link href="https://koudaihaizei.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 May 2022 21:25:28 +0800</lastBuildDate><atom:link href="https://koudaihaizei.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Leetcode3</title>
+      <link>https://koudaihaizei.github.io/posts/algorithm/leetcode/leetcode3/</link>
+      <pubDate>Sun, 22 May 2022 21:25:28 +0800</pubDate>
+      
+      <guid>https://koudaihaizei.github.io/posts/algorithm/leetcode/leetcode3/</guid>
+      <description>3. 无重复字符的最长子串  给定一个字符串 s ，请你找出其中不含有重复字符的 最长子串 的长度。
+示例 1:
+输入: s = &amp;ldquo;abcabcbb&amp;rdquo; 输出: 3 解释: 因为无重复字符的最长子串是 &amp;ldquo;abc&amp;rdquo;，所以其长度为 3。 示例 2:
+输入: s = &amp;ldquo;bbbbb&amp;rdquo; 输出: 1 解释: 因为无重复字符的最长子串是 &amp;ldquo;b&amp;rdquo;，所以其长度为 1。 示例 3:
+输入: s = &amp;ldquo;pwwkew&amp;rdquo; 输出: 3 解释: 因为无重复字符的最长子串是 &amp;ldquo;wke&amp;rdquo;，所以其长度为 3。 请注意，你的答案必须是 子串 的长度，&amp;ldquo;pwke&amp;rdquo; 是一个子序列，不是子串。
+提示：
+0 &amp;lt;= s.length &amp;lt;= 5 * 104 s 由英文字母、数字、符号和空格组成
+来源：力扣（LeetCode） 链接：https://leetcode.cn/problems/longest-substring-without-repeating-characters
+ 解法一 public int lengthOfLongestSubstring(String s) {  Map&amp;lt;Character, Integer&amp;gt; map = new HashMap&amp;lt;&amp;gt;();  int left = 0, right = 0;  int res = 0;  while (right &amp;lt; s.</description>
+    </item>
+    
+    <item>
+      <title>Leetcode438</title>
+      <link>https://koudaihaizei.github.io/posts/algorithm/leetcode/leetcode438/</link>
+      <pubDate>Sun, 22 May 2022 21:25:25 +0800</pubDate>
+      
+      <guid>https://koudaihaizei.github.io/posts/algorithm/leetcode/leetcode438/</guid>
+      <description>438. 找到字符串中所有字母异位词  给定两个字符串 s 和 p，找到 s 中所有 p 的 异位词 的子串，返回这些子串的起始索引。不考虑答案输出的顺序。
+异位词 指由相同字母重排列形成的字符串（包括相同的字符串）。
+来源：力扣（LeetCode） 链接：https://leetcode.cn/problems/find-all-anagrams-in-a-string
+ public List&amp;lt;Integer&amp;gt; findAnagrams(String s, String p) {  List&amp;lt;Integer&amp;gt; res = new ArrayList&amp;lt;&amp;gt;();  if (p.length() &amp;gt; s.length()) {  return res;  }  int[] need = new int[26];  int[] window = new int[26];  int count = 0;  for (char c : p.toCharArray()) {  int index = getIndex(c);  if (need[index] == 0) {  count++;  }  need[index]++;  }  int left = 0, right = 0;  int valid = 0;  while (right &amp;lt; s.</description>
+    </item>
+    
+    <item>
+      <title>Leetcode567</title>
+      <link>https://koudaihaizei.github.io/posts/algorithm/leetcode/leetcode567/</link>
+      <pubDate>Sun, 22 May 2022 21:25:19 +0800</pubDate>
+      
+      <guid>https://koudaihaizei.github.io/posts/algorithm/leetcode/leetcode567/</guid>
+      <description>567. 字符串的排列  给你两个字符串 s1 和 s2 ，写一个函数来判断 s2 是否包含 s1 的排列。如果是，返回 true ；否则，返回 false 。
+换句话说，s1 的排列之一是 s2 的 子串 。
+来源：力扣（LeetCode） 链接：https://leetcode.cn/problems/permutation-in-string
+ public boolean checkInclusion(String s1, String s2) {  if (s1.length() &amp;gt; s2.length()) {  return false;  }  // 初始化目标字符数组并计数  int[] need = new int[26];  int[] window = new int[26];  int count = 0;  for (char c : s1.toCharArray()) {  int index = getIndex(c);  if (need[index] == 0) {  count++;  }  need[index]++;  }   int left = 0, right = 0;  int valid = 0;  // 区间[left, right)  while (right &amp;lt; s2.</description>
+    </item>
+    
+    <item>
+      <title>Leetcode76</title>
+      <link>https://koudaihaizei.github.io/posts/algorithm/leetcode/leetcode76/</link>
+      <pubDate>Thu, 19 May 2022 22:54:36 +0800</pubDate>
+      
+      <guid>https://koudaihaizei.github.io/posts/algorithm/leetcode/leetcode76/</guid>
+      <description>76. 最小覆盖子串  给你一个字符串 s 、一个字符串 t 。返回 s 中涵盖 t 所有字符的最小子串。如果 s 中不存在涵盖 t 所有字符的子串，则返回空字符串 &amp;quot;&amp;quot; 。
+注意：
+对于 t 中重复字符，我们寻找的子字符串中该字符数量必须不少于 t 中该字符数量。 如果 s 中存在这样的子串，我们保证它是唯一的答案。
+来源：力扣（LeetCode） 链接：https://leetcode.cn/problems/minimum-window-substring
+ 解法一 public String minWindow(String s, String t) {  if (s.length() &amp;lt; t.length()) {  return &amp;#34;&amp;#34;;  }   // 初始化目标字符集合并计数  Map&amp;lt;Character, Integer&amp;gt; need = new HashMap&amp;lt;&amp;gt;();  for (int i = 0; i &amp;lt; t.length(); i++) {  need.</description>
+    </item>
+    
     <item>
       <title>Leetcode51</title>
       <link>https://koudaihaizei.github.io/posts/algorithm/leetcode/leetcode51/</link>

@@ -26,11 +26,11 @@
 /** * 无法中断 */ private void demo1() {  Thread thread = new Thread(() -> {  while (true) {  Thread.yield();  }  });  thread.start();  thread.interrupt(); } 程序通过对中断标识位判断做出处理，响应中断执行返回
 /** * 响应中断 */ private void demo2() {  Thread thread = new Thread(() -> {  while (true) {  Thread.yield();  if (Thread.currentThread().isInterrupted()) {  System.out.println(&#34;thread is interrupted&#34;);  return;  }  }  });  thread.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://koudaihaizei.github.io/posts/java/concurrency/interrupts/"><meta property="og:image" content="https://koudaihaizei.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"><meta property="article:section" content="posts">
+<meta property="og:url" content="https://koudaihaizei.github.io/posts/java/concurrency/interrupts/"><meta property="og:image" content="https://koudaihaizei.github.io/images/site/lien"><meta property="article:section" content="posts">
 <meta property="article:published_time" content="2022-04-26T14:38:47+08:00">
-<meta property="article:modified_time" content="2022-04-26T14:38:47+08:00"><meta property="og:site_name" content="ExampleSite">
+<meta property="article:modified_time" content="2022-04-26T14:38:47+08:00"><meta property="og:site_name" content="JokerSite">
 <meta name=twitter:card content="summary_large_image">
-<meta name=twitter:image content="https://koudaihaizei.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E">
+<meta name=twitter:image content="https://koudaihaizei.github.io/images/site/lien">
 <meta name=twitter:title content="中断">
 <meta name=twitter:description content="中断用于指示线程停止正在做的事情，但线程响应中断的方式由程序决定，通常情况下程序会执行中断处理。
 未对中断标识位判断，无法响应中断
@@ -44,7 +44,7 @@
 <nav class=nav>
 <div class=logo>
 <a href=https://koudaihaizei.github.io accesskey=h title="Home (Alt + H)">
-<img src=https://koudaihaizei.github.io/apple-touch-icon.png alt=logo aria-label=logo height=35>Home</a>
+<img src=https://koudaihaizei.github.io/images/site/lien alt=logo aria-label=logo height=35>Home</a>
 <span class=logo-switches>
 <button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
 </button>
@@ -57,10 +57,6 @@
 </li><li>
 <a href=https://koudaihaizei.github.io/tags/ title=tags>
 <span>tags</span>
-</a>
-</li><li>
-<a href=https://example.org title=example.org>
-<span>example.org</span>
 </a>
 </li></ul></nav></header><main class=main>
 <article class=post-single>

@@ -18,13 +18,13 @@
 <link rel=alternate type=application/rss+xml href=https://koudaihaizei.github.io/posts/index.xml>
 <noscript>
 <style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><script type=application/javascript>var doNotTrack=!1;doNotTrack||(function(e,o,i,a,t,n,s){e.GoogleAnalyticsObject=t,e[t]=e[t]||function(){(e[t].q=e[t].q||[]).push(arguments)},e[t].l=1*new Date,n=o.createElement(i),s=o.getElementsByTagName(i)[0],n.async=1,n.src=a,s.parentNode.insertBefore(n,s)}(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-123-45","auto"),ga("send","pageview"))</script><meta property="og:title" content="Posts">
-<meta property="og:description" content="ExampleSite description">
+<meta property="og:description" content="joker's site">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://koudaihaizei.github.io/posts/"><meta property="og:image" content="https://koudaihaizei.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"><meta property="og:site_name" content="ExampleSite">
+<meta property="og:url" content="https://koudaihaizei.github.io/posts/"><meta property="og:image" content="https://koudaihaizei.github.io/images/site/lien"><meta property="og:site_name" content="JokerSite">
 <meta name=twitter:card content="summary_large_image">
-<meta name=twitter:image content="https://koudaihaizei.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E">
+<meta name=twitter:image content="https://koudaihaizei.github.io/images/site/lien">
 <meta name=twitter:title content="Posts">
-<meta name=twitter:description content="ExampleSite description">
+<meta name=twitter:description content="joker's site">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":2,"name":"Posts","item":"https://koudaihaizei.github.io/posts/"}]}</script>
 </head><body class=list id=top>
 <script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script>
@@ -32,7 +32,7 @@
 <nav class=nav>
 <div class=logo>
 <a href=https://koudaihaizei.github.io accesskey=h title="Home (Alt + H)">
-<img src=https://koudaihaizei.github.io/apple-touch-icon.png alt=logo aria-label=logo height=35>Home</a>
+<img src=https://koudaihaizei.github.io/images/site/lien alt=logo aria-label=logo height=35>Home</a>
 <span class=logo-switches>
 <button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
 </button>
@@ -46,12 +46,46 @@
 <a href=https://koudaihaizei.github.io/tags/ title=tags>
 <span>tags</span>
 </a>
-</li><li>
-<a href=https://example.org title=example.org>
-<span>example.org</span>
-</a>
 </li></ul></nav></header><main class=main>
 <header class=page-header><div class=breadcrumbs><a href=https://koudaihaizei.github.io>Home</a></div><h1>Posts</h1></header><article class=post-entry>
+<header class=entry-header>
+<h2>Leetcode3
+</h2></header><div class=entry-content>
+<p>3. 无重复字符的最长子串 给定一个字符串 s ，请你找出其中不含有重复字符的 最长子串 的长度。
+示例 1:
+输入: s = “abcabcbb” 输出: 3 解释: 因为无重复字符的最长子串是 “abc”，所以其长度为 3。 示例 2:
+输入: s = “bbbbb” 输出: 1 解释: 因为无重复字符的最长子串是 “b”，所以其长度为 1。 示例 3:
+输入: s = “pwwkew” 输出: 3 解释: 因为无重复字符的最长子串是 “wke”，所以其长度为 3。 请注意，你的答案必须是 子串 的长度，“pwke” 是一个子序列，不是子串。
+提示：
+0 &lt;= s.length &lt;= 5 * 104 s 由英文字母、数字、符号和空格组成
+来源：力扣（LeetCode） 链接：https://leetcode.cn/problems/longest-substring-without-repeating-characters
+解法一 public int lengthOfLongestSubstring(String s) { Map&lt;Character, Integer> map = new HashMap&lt;>(); int left = 0, right = 0; int res = 0; while (right &lt; s....</p></div><footer class=entry-footer><span title="2022-05-22 21:25:28 +0800 CST">May 22, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to Leetcode3" href=https://koudaihaizei.github.io/posts/algorithm/leetcode/leetcode3/></a>
+</article><article class=post-entry>
+<header class=entry-header>
+<h2>Leetcode438
+</h2></header><div class=entry-content>
+<p>438. 找到字符串中所有字母异位词 给定两个字符串 s 和 p，找到 s 中所有 p 的 异位词 的子串，返回这些子串的起始索引。不考虑答案输出的顺序。
+异位词 指由相同字母重排列形成的字符串（包括相同的字符串）。
+来源：力扣（LeetCode） 链接：https://leetcode.cn/problems/find-all-anagrams-in-a-string
+public List&lt;Integer> findAnagrams(String s, String p) { List&lt;Integer> res = new ArrayList&lt;>(); if (p.length() > s.length()) { return res; } int[] need = new int[26]; int[] window = new int[26]; int count = 0; for (char c : p.toCharArray()) { int index = getIndex(c); if (need[index] == 0) { count++; } need[index]++; } int left = 0, right = 0; int valid = 0; while (right &lt; s....</p></div><footer class=entry-footer><span title="2022-05-22 21:25:25 +0800 CST">May 22, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to Leetcode438" href=https://koudaihaizei.github.io/posts/algorithm/leetcode/leetcode438/></a>
+</article><article class=post-entry>
+<header class=entry-header>
+<h2>Leetcode567
+</h2></header><div class=entry-content>
+<p>567. 字符串的排列 给你两个字符串 s1 和 s2 ，写一个函数来判断 s2 是否包含 s1 的排列。如果是，返回 true ；否则，返回 false 。
+换句话说，s1 的排列之一是 s2 的 子串 。
+来源：力扣（LeetCode） 链接：https://leetcode.cn/problems/permutation-in-string
+public boolean checkInclusion(String s1, String s2) { if (s1.length() > s2.length()) { return false; } // 初始化目标字符数组并计数 int[] need = new int[26]; int[] window = new int[26]; int count = 0; for (char c : s1.toCharArray()) { int index = getIndex(c); if (need[index] == 0) { count++; } need[index]++; } int left = 0, right = 0; int valid = 0; // 区间[left, right) while (right &lt; s2....</p></div><footer class=entry-footer><span title="2022-05-22 21:25:19 +0800 CST">May 22, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to Leetcode567" href=https://koudaihaizei.github.io/posts/algorithm/leetcode/leetcode567/></a>
+</article><article class=post-entry>
+<header class=entry-header>
+<h2>Leetcode76
+</h2></header><div class=entry-content>
+<p>76. 最小覆盖子串 给你一个字符串 s 、一个字符串 t 。返回 s 中涵盖 t 所有字符的最小子串。如果 s 中不存在涵盖 t 所有字符的子串，则返回空字符串 "" 。
+注意：
+对于 t 中重复字符，我们寻找的子字符串中该字符数量必须不少于 t 中该字符数量。 如果 s 中存在这样的子串，我们保证它是唯一的答案。
+来源：力扣（LeetCode） 链接：https://leetcode.cn/problems/minimum-window-substring
+解法一 public String minWindow(String s, String t) { if (s.length() &lt; t.length()) { return ""; } // 初始化目标字符集合并计数 Map&lt;Character, Integer> need = new HashMap&lt;>(); for (int i = 0; i &lt; t.length(); i++) { need....</p></div><footer class=entry-footer><span title="2022-05-19 22:54:36 +0800 CST">May 19, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to Leetcode76" href=https://koudaihaizei.github.io/posts/algorithm/leetcode/leetcode76/></a>
+</article><article class=post-entry>
 <header class=entry-header>
 <h2>Leetcode51
 </h2></header><div class=entry-content>
@@ -60,40 +94,6 @@
 每一种解法包含一个不同的 n 皇后问题 的棋子放置方案，该方案中 ‘Q’ 和 ‘.’ 分别代表了皇后和空位。
 来源：力扣（LeetCode） 链接：https://leetcode.cn/problems/n-queens
 public List&lt;List&lt;String>> solveNQueens(int n) { List&lt;List&lt;String>> res = new ArrayList&lt;>(); char[][] temp = new char[n][n]; for (int i = 0; i &lt; n; i++) { for (int j = 0; j &lt; n; j++) { temp[i][j] = '....</p></div><footer class=entry-footer><span title="2022-05-16 22:50:57 +0800 CST">May 16, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to Leetcode51" href=https://koudaihaizei.github.io/posts/algorithm/leetcode/leetcode51/></a>
-</article><article class=post-entry>
-<header class=entry-header>
-<h2>Leetcode322
-</h2></header><div class=entry-content>
-<p>322. 零钱兑换 给你一个整数数组 coins ，表示不同面额的硬币；以及一个整数 amount ，表示总金额。
-计算并返回可以凑成总金额所需的 最少的硬币个数 。如果没有任何一种硬币组合能组成总金额，返回 -1 。
-你可以认为每种硬币的数量是无限的。
-来源：力扣（LeetCode） 链接：https://leetcode.cn/problems/coin-change
-解法一，自顶向下
-public int coinChange(int[] coins, int amount) { int[] dp = new int[amount + 1]; // 初始化为无法达到的最大值 Arrays.fill(dp, amount + 1); int res = coinChange(coins, amount, dp, amount); // 判断是否能够凑整 return res != amount + 1 ? res : -1; } private int coinChange(int[] coins, int amount, int[] dp, int total) { if (amount == 0) { return 0; } if (amount &lt; 0) { return -1; } // 利用记录结果减少重复计算 if (dp[amount] !...</p></div><footer class=entry-footer><span title="2022-05-09 23:39:39 +0800 CST">May 9, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to Leetcode322" href=https://koudaihaizei.github.io/posts/algorithm/leetcode/leetcode322/></a>
-</article><article class=post-entry>
-<header class=entry-header>
-<h2>Leetcode18
-</h2></header><div class=entry-content>
-<p>18. 四数之和 给你一个由 n 个整数组成的数组 nums ，和一个目标值 target 。请你找出并返回满足下述全部条件且不重复的四元组 [nums[a], nums[b], nums[c], nums[d]] （若两个四元组元素一一对应，则认为两个四元组重复）：
-0 &lt;= a, b, c, d &lt; n a、b、c 和 d 互不相同 nums[a] + nums[b] + nums[c] + nums[d] == target 你可以按 任意顺序 返回答案 。
-来源：力扣（LeetCode） 链接：https://leetcode.cn/problems/4sum
-public List&lt;List&lt;Integer>> fourSum(int[] nums, int target) { List&lt;List&lt;Integer>> res = new ArrayList&lt;>(); if (nums.length &lt; 4) { return res; } // 升序排序 Arrays....</p></div><footer class=entry-footer><span title="2022-05-09 22:28:29 +0800 CST">May 9, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to Leetcode18" href=https://koudaihaizei.github.io/posts/algorithm/leetcode/leetcode18/></a>
-</article><article class=post-entry>
-<header class=entry-header>
-<h2>Leetcode509
-</h2></header><div class=entry-content>
-<p>509. 斐波那契数 斐波那契数 （通常用 F(n) 表示）形成的序列称为 斐波那契数列 。该数列由 0 和 1 开始，后面的每一项数字都是前面两项数字的和。也就是：
-F(0) = 0，F(1) = 1 F(n) = F(n - 1) + F(n - 2)，其中 n > 1 给定 n ，请计算 F(n) 。
-来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/fibonacci-number
-自底向上解法 public int fib(int n) { // f(0)=0,f(1)=1 if (n &lt;= 1) { return n; } int a = 0; int b = 1; for (int i = 2; i &lt;= n; i++) { // 临时保存b的值，以便于赋值给a int tmp = b; b = a + b; a = tmp; } return b; } 自顶向下解法 public int fib(int n) { // 备忘录，记录已计算的函数值 int[] memo = new int[n + 1]; return helper(n, memo); } private int helper(int n, int[] memo) { if (n &lt;= 1) { return n; } // 如果备忘录已记录，则直接返回备忘录结果值 if (memo[n] !...</p></div><footer class=entry-footer><span title="2022-05-08 20:57:47 +0800 CST">May 8, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to Leetcode509" href=https://koudaihaizei.github.io/posts/algorithm/leetcode/leetcode509/></a>
-</article><article class=post-entry>
-<header class=entry-header>
-<h2>Leetcode15
-</h2></header><div class=entry-content>
-<p>15. 三数之和 给你一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ，使得 a + b + c = 0 ？请你找出所有和为 0 且不重复的三元组。
-注意：答案中不可以包含重复的三元组。
-来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/3sum
-public List&lt;List&lt;Integer>> threeSum(int[] nums) { List&lt;List&lt;Integer>> res = new ArrayList&lt;>(); if (nums.length &lt; 3) { return res; } // 排序后，遍历第一个数，并用双指针法计算后面两个数 Arrays.sort(nums); for (int i = 0; i &lt; nums.length - 2; i++) { // 避免重复，跳过已经计算过的相同的第一个数 if (i !...</p></div><footer class=entry-footer><span title="2022-05-06 23:20:02 +0800 CST">May 6, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to Leetcode15" href=https://koudaihaizei.github.io/posts/algorithm/leetcode/leetcode15/></a>
 </article><footer class=page-footer>
 <nav class=pagination>
 <a class=next href=https://koudaihaizei.github.io/posts/page/2/>Next Page »</a>

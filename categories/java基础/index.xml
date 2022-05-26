@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>JAVA基础 on JokerSite</title>
+    <link>https://koudaihaizei.github.io/categories/java%E5%9F%BA%E7%A1%80/</link>
+    <description>Recent content in JAVA基础 on JokerSite</description>
+    <image>
+      <url>https://koudaihaizei.github.io/images/site/lien</url>
+      <link>https://koudaihaizei.github.io/images/site/lien</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 26 Apr 2022 14:38:47 +0800</lastBuildDate><atom:link href="https://koudaihaizei.github.io/categories/java%E5%9F%BA%E7%A1%80/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>中断</title>
+      <link>https://koudaihaizei.github.io/posts/java/concurrency/interrupts/</link>
+      <pubDate>Tue, 26 Apr 2022 14:38:47 +0800</pubDate>
+      
+      <guid>https://koudaihaizei.github.io/posts/java/concurrency/interrupts/</guid>
+      <description>中断用于指示线程停止正在做的事情，但线程响应中断的方式由程序决定，通常情况下程序会执行中断处理。
+未对中断标识位判断，无法响应中断
+/** * 无法中断 */ private void demo1() {  Thread thread = new Thread(() -&amp;gt; {  while (true) {  Thread.yield();  }  });  thread.start();  thread.interrupt(); } 程序通过对中断标识位判断做出处理，响应中断执行返回
+/** * 响应中断 */ private void demo2() {  Thread thread = new Thread(() -&amp;gt; {  while (true) {  Thread.yield();  if (Thread.currentThread().isInterrupted()) {  System.out.println(&amp;#34;thread is interrupted&amp;#34;);  return;  }  }  });  thread.</description>
+    </item>
+    
+  </channel>
+</rss>
