@@ -50,6 +50,15 @@
 </li></ul></nav></header><main class=main>
 <article class=post-entry>
 <header class=entry-header>
+<h2>Leetcode34
+</h2></header><div class=entry-content>
+<p>34. 在排序数组中查找元素的第一个和最后一个位置 给定一个按照升序排列的整数数组 nums，和一个目标值 target。找出给定目标值在数组中的开始位置和结束位置。
+如果数组中不存在目标值 target，返回 [-1, -1]。
+来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/find-first-and-last-position-of-element-in-sorted-array
+思路基于二分查找改造，边界条件判断可参考leetcode704。
+解法一 public int[] searchRange(int[] nums, int target) { int leftIndex = searchLeftRange(nums, target); if (leftIndex == -1) { return new int[]{-1, -1}; } int rightIndex = searchRightRange(nums, target) ; return new int[]{leftIndex, rightIndex}; } private int searchLeftRange(int[] nums, int target) { int left = 0; int right = nums....</p></div><footer class=entry-footer><span title="2022-05-05 23:13:58 +0800 CST">May 5, 2022</span>&nbsp;·&nbsp;3 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to Leetcode34" href=https://koudaihaizei.github.io/posts/algorithm/leetcode/leetcode34/></a>
+</article><article class=post-entry>
+<header class=entry-header>
 <h2>Leetcode704
 </h2></header><div class=entry-content>
 <p>704. 二分查找 给定一个 n 个元素有序的（升序）整型数组 nums 和一个目标值 target ，写一个函数搜索 nums 中的 target，如果目标值存在返回下标，否则返回 -1。
