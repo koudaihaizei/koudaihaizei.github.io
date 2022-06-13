@@ -48,47 +48,56 @@
 </li></ul></nav></header><main class=main>
 <header class=page-header><div class=breadcrumbs><a href=https://koudaihaizei.github.io>Home</a>&nbsp;»&nbsp;<a href=https://koudaihaizei.github.io/categories/>Categories</a></div><h1>算法</h1></header><article class="post-entry tag-entry">
 <header class=entry-header>
-<h2>Leetcode322
+<h2>Leetcode21
 </h2></header><div class=entry-content>
-<p>322. 零钱兑换 给你一个整数数组 coins ，表示不同面额的硬币；以及一个整数 amount ，表示总金额。
-计算并返回可以凑成总金额所需的 最少的硬币个数 。如果没有任何一种硬币组合能组成总金额，返回 -1 。
-你可以认为每种硬币的数量是无限的。
-来源：力扣（LeetCode） 链接：https://leetcode.cn/problems/coin-change
-解法一，自顶向下
-public int coinChange(int[] coins, int amount) { int[] dp = new int[amount + 1]; // 初始化为无法达到的最大值 Arrays.fill(dp, amount + 1); int res = coinChange(coins, amount, dp, amount); // 判断是否能够凑整 return res != amount + 1 ? res : -1; } private int coinChange(int[] coins, int amount, int[] dp, int total) { if (amount == 0) { return 0; } if (amount &lt; 0) { return -1; } // 利用记录结果减少重复计算 if (dp[amount] !...</p></div><footer class=entry-footer><span title="2022-05-09 23:39:39 +0800 CST">May 9, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to Leetcode322" href=https://koudaihaizei.github.io/posts/algorithm/leetcode/leetcode322/></a>
+<p>21. 合并两个有序链表 将两个升序链表合并为一个新的 升序 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。
+示例 1：
+输入：l1 = [1,2,4], l2 = [1,3,4] 输出：[1,1,2,3,4,4] 示例 2：
+输入：l1 = [], l2 = [] 输出：[] 示例 3：
+输入：l1 = [], l2 = [0] 输出：[0]
+来源：力扣（LeetCode） 链接：https://leetcode.cn/problems/merge-two-sorted-lists
+public ListNode mergeTwoLists(ListNode list1, ListNode list2) { ListNode dummy = new ListNode(-1); ListNode cur = dummy; while (list1 != null && list2 != null) { if (list1.val &lt; list2.val) { cur....</p></div><footer class=entry-footer><span title="2022-06-12 21:58:16 +0800 CST">June 12, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to Leetcode21" href=https://koudaihaizei.github.io/posts/algorithm/leetcode/leetcode21/></a>
 </article><article class="post-entry tag-entry">
 <header class=entry-header>
-<h2>Leetcode18
+<h2>Leetcode752
 </h2></header><div class=entry-content>
-<p>18. 四数之和 给你一个由 n 个整数组成的数组 nums ，和一个目标值 target 。请你找出并返回满足下述全部条件且不重复的四元组 [nums[a], nums[b], nums[c], nums[d]] （若两个四元组元素一一对应，则认为两个四元组重复）：
-0 &lt;= a, b, c, d &lt; n a、b、c 和 d 互不相同 nums[a] + nums[b] + nums[c] + nums[d] == target 你可以按 任意顺序 返回答案 。
-来源：力扣（LeetCode） 链接：https://leetcode.cn/problems/4sum
-public List&lt;List&lt;Integer>> fourSum(int[] nums, int target) { List&lt;List&lt;Integer>> res = new ArrayList&lt;>(); if (nums.length &lt; 4) { return res; } // 升序排序 Arrays....</p></div><footer class=entry-footer><span title="2022-05-09 22:28:29 +0800 CST">May 9, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to Leetcode18" href=https://koudaihaizei.github.io/posts/algorithm/leetcode/leetcode18/></a>
+<p>752. 打开转盘锁 你有一个带有四个圆形拨轮的转盘锁。每个拨轮都有10个数字： ‘0’, ‘1’, ‘2’, ‘3’, ‘4’, ‘5’, ‘6’, ‘7’, ‘8’, ‘9’ 。每个拨轮可以自由旋转：例如把 ‘9’ 变为 ‘0’，‘0’ 变为 ‘9’ 。每次旋转都只能旋转一个拨轮的一位数字。
+锁的初始数字为 ‘0000’ ，一个代表四个拨轮的数字的字符串。
+列表 deadends 包含了一组死亡数字，一旦拨轮的数字和列表里的任何一个元素相同，这个锁将会被永久锁定，无法再被旋转。
+字符串 target 代表可以解锁的数字，你需要给出解锁需要的最小旋转次数，如果无论如何不能解锁，返回 -1 。
+来源：力扣（LeetCode） 链接：https://leetcode.cn/problems/open-the-lock
+解法一 DFS
+public int openLock(String[] deadends, String target) { // 存放死亡数字 Set&lt;String> lock = new HashSet&lt;>(Arrays.asList(deadends)); Queue&lt;String> queue = new ArrayDeque&lt;>(); // 存放遍历过的数字，避免重复遍历 Set&lt;String> visited = new HashSet&lt;>(); queue.offer("0000"); visited....</p></div><footer class=entry-footer><span title="2022-06-11 23:57:56 +0800 CST">June 11, 2022</span>&nbsp;·&nbsp;2 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to Leetcode752" href=https://koudaihaizei.github.io/posts/algorithm/leetcode/leetcode752/></a>
 </article><article class="post-entry tag-entry">
 <header class=entry-header>
-<h2>Leetcode509
+<h2>Leetcode111
 </h2></header><div class=entry-content>
-<p>509. 斐波那契数 斐波那契数 （通常用 F(n) 表示）形成的序列称为 斐波那契数列 。该数列由 0 和 1 开始，后面的每一项数字都是前面两项数字的和。也就是：
-F(0) = 0，F(1) = 1 F(n) = F(n - 1) + F(n - 2)，其中 n > 1 给定 n ，请计算 F(n) 。
-来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/fibonacci-number
-自底向上解法 public int fib(int n) { // f(0)=0,f(1)=1 if (n &lt;= 1) { return n; } int a = 0; int b = 1; for (int i = 2; i &lt;= n; i++) { // 临时保存b的值，以便于赋值给a int tmp = b; b = a + b; a = tmp; } return b; } 自顶向下解法 public int fib(int n) { // 备忘录，记录已计算的函数值 int[] memo = new int[n + 1]; return helper(n, memo); } private int helper(int n, int[] memo) { if (n &lt;= 1) { return n; } // 如果备忘录已记录，则直接返回备忘录结果值 if (memo[n] !...</p></div><footer class=entry-footer><span title="2022-05-08 20:57:47 +0800 CST">May 8, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to Leetcode509" href=https://koudaihaizei.github.io/posts/algorithm/leetcode/leetcode509/></a>
+<p>111. 二叉树的最小深度 给定一个二叉树，找出其最小深度。
+最小深度是从根节点到最近叶子节点的最短路径上的节点数量。
+说明：叶子节点是指没有子节点的节点。
+示例 1：
+输入：root = [3,9,20,null,null,15,7] 输出：2 示例 2：
+输入：root = [2,null,3,null,4,null,5,null,6] 输出：5
+来源：力扣（LeetCode） 链接：https://leetcode.cn/problems/minimum-depth-of-binary-tree
+public int minDepth(TreeNode root) { if (root == null) { return 0; } // 广度优先遍历，利用队列存储待遍历列表 Queue&lt;TreeNode> queue = new LinkedList&lt;>(); queue.offer(root); int depth = 1; while (!queue.isEmpty()) { int size = queue.size(); for (int i = 0; i &lt; size; i++) { TreeNode node = queue....</p></div><footer class=entry-footer><span title="2022-06-11 23:47:51 +0800 CST">June 11, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to Leetcode111" href=https://koudaihaizei.github.io/posts/algorithm/leetcode/leetcode111/></a>
 </article><article class="post-entry tag-entry">
 <header class=entry-header>
-<h2>Leetcode15
+<h2>Leetcode188
 </h2></header><div class=entry-content>
-<p>15. 三数之和 给你一个包含 n 个整数的数组 nums，判断 nums 中是否存在三个元素 a，b，c ，使得 a + b + c = 0 ？请你找出所有和为 0 且不重复的三元组。
-注意：答案中不可以包含重复的三元组。
-来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/3sum
-public List&lt;List&lt;Integer>> threeSum(int[] nums) { List&lt;List&lt;Integer>> res = new ArrayList&lt;>(); if (nums.length &lt; 3) { return res; } // 排序后，遍历第一个数，并用双指针法计算后面两个数 Arrays.sort(nums); for (int i = 0; i &lt; nums.length - 2; i++) { // 避免重复，跳过已经计算过的相同的第一个数 if (i !...</p></div><footer class=entry-footer><span title="2022-05-06 23:20:02 +0800 CST">May 6, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to Leetcode15" href=https://koudaihaizei.github.io/posts/algorithm/leetcode/leetcode15/></a>
+<p>188. 买卖股票的最佳时机 IV 给定一个整数数组 prices ，它的第 i 个元素 prices[i] 是一支给定的股票在第 i 天的价格。
+设计一个算法来计算你所能获取的最大利润。你最多可以完成 k 笔交易。
+注意：你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。
+来源：力扣（LeetCode） 链接：https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iv
+public int maxProfit(int k, int[] prices) { int n = prices.length; if (n &lt;= 0) { return 0; } int[][][] dp = new int[n][k + 1][2]; for (int i = 1; i &lt;= k; i++) { dp[0][i][1] = -prices[0]; } for (int i = 1; i &lt; n; i++) { for (int j = 1; j &lt;= k; j++) { dp[i][j][0] = Math....</p></div><footer class=entry-footer><span title="2022-06-05 22:59:35 +0800 CST">June 5, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to Leetcode188" href=https://koudaihaizei.github.io/posts/algorithm/leetcode/leetcode188/></a>
 </article><article class="post-entry tag-entry">
 <header class=entry-header>
-<h2>Leetcode1
+<h2>Leetcode123
 </h2></header><div class=entry-content>
-<p>1. 两数之和 给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target 的那 两个 整数，并返回它们的数组下标。
-你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。
-你可以按任意顺序返回答案。
-来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/two-sum
-public int[] twoSum(int[] nums, int target) { // 利用hash表提升检索效率 Map&lt;Integer, Integer> map = new HashMap&lt;>(); for (int i = 0; i &lt; nums.length; i++) { int other = target - nums[i]; // 遍历过程中判断后加入集合，效率最高 if (map.containsKey(other)) { return new int[]{map.get(other), i}; } map.put(nums[i], i); } return new int[]{-1, -1}; } </p></div><footer class=entry-footer><span title="2022-05-06 22:33:10 +0800 CST">May 6, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to Leetcode1" href=https://koudaihaizei.github.io/posts/algorithm/leetcode/leetcode1/></a>
+<p>123. 买卖股票的最佳时机 III 给定一个数组，它的第 i 个元素是一支给定的股票在第 i 天的价格。
+设计一个算法来计算你所能获取的最大利润。你最多可以完成 两笔 交易。
+注意：你不能同时参与多笔交易（你必须在再次购买前出售掉之前的股票）。
+来源：力扣（LeetCode） 链接：https://leetcode.cn/problems/best-time-to-buy-and-sell-stock-iii
+public int maxProfit(int[] prices) { int n = prices.length; int[][][] dp = new int[n][3][2]; // base case // dp[0][0][0] = 0; // dp[0][2][0] = 0; dp[0][1][1] = -prices[0]; dp[0][2][1] = -prices[0]; for (int i = 1; i &lt; n; i++) { for (int k = 1; k &lt;= 2; k++) { dp[i][k][0] = Math....</p></div><footer class=entry-footer><span title="2022-06-05 21:46:07 +0800 CST">June 5, 2022</span>&nbsp;·&nbsp;1 min&nbsp;·&nbsp;Me</footer><a class=entry-link aria-label="post link to Leetcode123" href=https://koudaihaizei.github.io/posts/algorithm/leetcode/leetcode123/></a>
 </article><footer class=page-footer>
 <nav class=pagination>
 <a class=prev href=https://koudaihaizei.github.io/categories/%E7%AE%97%E6%B3%95/>« Prev Page</a>
